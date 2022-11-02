@@ -90,11 +90,11 @@ public class App {
                                 for (Peliculas pelicula : listaPeliculasRentadas) {
                                     if (pelicula.getIdPelicula().equals(codigoDevolucion)) {
                                         pelicula.setCantidad(pelicula.getCantidad() + 1);
+                                        pelicula.setCantidadRentas(pelicula.getCantidadRentas() - 1);
                                         listaPeliculas.add(pelicula);
                                         peliculas.setListaPeliculasDisponibles(listaPeliculas);
                                         peliculas.setListaPeliculasEnRenta(listaPeliculasRentadas);
                                         validacionDevolucion = 1;
-                                        System.out.println("Pelicula devuelta exitosamente");
                                         break;
                                     }
                                 }
